@@ -1,0 +1,59 @@
+body {
+  background-color: #010806;
+  color: white;
+  overflow: auto;
+  mat-toolbar {
+    background-color: #010806;
+    color: #fff;
+    padding-inline: 32px;
+    padding-top: 48px;
+    height: 12%;
+    position: sticky;
+    z-index: 1000;
+    top: 0;
+    .media-header {
+      font-size: 40px;
+    }
+
+    .search-form {
+      padding: 12px;
+      min-width: 100px;
+      max-width: 1200px;
+      width: 100%;
+
+      .search-form-field {
+        width: 100%;
+        .search-input {
+          height: 100%;
+        }
+      }
+    }
+
+    .icons-row {
+      width: 12%;
+      .media-icon-row {
+        width: 50%;
+      }
+    }
+
+    .media-icon {
+      font-size: 28px;
+    }
+
+    .profile-icon {
+      font-size: 28px;
+      padding: 12px;
+      border-radius: 50%;
+      background-color: #ffffff30;
+    }
+  }
+}
+
+::ng-deep .mat-autocomplete-panel {
+  max-height: 600px !important;
+}
+// ::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
+//   background-color: #ffffff30;
+
+//   outline: none;
+// }

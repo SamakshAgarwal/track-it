@@ -1,0 +1,20 @@
+<body>
+  <mat-grid-list
+    class="mat-grid-list"
+    cols="10"
+    rowHeight="3:4"
+    gutterSize="12px"
+  >
+    <mat-grid-tile
+      fxLayoutAlign="center"
+      *ngFor="let media of mediaList; index as idx"
+      [colspan]="media.colSpan"
+      [rowspan]="media.rowSpan"
+    >
+      <img [src]="media.url" height="100%" width="100%" />
+      <mat-grid-tile-footer
+        >Media {{ idx }}</mat-grid-tile-footer
+      ></mat-grid-tile
+    >
+  </mat-grid-list>
+</body>

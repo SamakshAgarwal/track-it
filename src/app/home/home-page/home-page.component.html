@@ -1,0 +1,40 @@
+<body>
+  <mat-toolbar fxLayoutAlign="space-between center">
+    <span class="media-header">My Movies</span>
+    <form class="search-form">
+      <mat-form-field class="search-form-field" appearance="fill">
+        <input
+          class="search-input"
+          matInput
+          type="search"
+          [formControl]="searchFormControl"
+          [matAutocomplete]="auto"
+        />
+        <mat-autocomplete
+          autoActiveFirstOption
+          #auto="matAutocomplete"
+          class="search-autocomplete"
+        >
+          <div *ngIf="mediaList$ | async as mediaList">
+            <mat-option
+              *ngFor="let media of mediaList.results"
+              style="height: min-content"
+            >
+              <app-search-result [media]="media"></app-search-result>
+            </mat-option>
+            <mat-option (click)="search()">Load More</mat-option>
+          </div>
+        </mat-autocomplete>
+      </mat-form-field>
+    </form>
+    <span class="icons-row" fxLayout="row" fxLayoutAlign="space-between center">
+      <span class="media-icon-row" fxLayoutAlign="space-between center">
+        <mat-icon class="media-icon">movie</mat-icon>
+        <mat-icon class="media-icon">personal_video</mat-icon>
+        <mat-icon class="media-icon">book</mat-icon>
+      </span>
+      <mat-icon class="profile-icon">person</mat-icon>
+    </span>
+  </mat-toolbar>
+  <app-media-grid></app-media-grid>
+</body>

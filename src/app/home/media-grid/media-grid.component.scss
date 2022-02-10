@@ -1,0 +1,14 @@
+body{
+    margin: 24px;
+    background-color: #ffffff10;
+    border-radius: 20px;
+    height: max-content;
+    padding: 24px;
+    mat-grid-list{
+
+        mat-grid-tile{
+        border-radius: 12px;
+        background-color: cadetblue;
+        }
+    }
+}

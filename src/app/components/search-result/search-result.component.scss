@@ -1,0 +1,14 @@
+.search-card {
+  max-height: min-content;
+  .search-card-header {
+    max-height: 75px;
+    .search-card-poster {
+      height: 80px;
+      width: 50px;
+      border-radius: 0px;
+      //   background-image: url("media.poster_path");
+      background-size: contain !important;
+      background-repeat: no-repeat;
+    }
+  }
+}
